@@ -21,7 +21,6 @@ export const World = () => {
     return (
         <div className="container">
 
-            <h2>Notícias recentes</h2>
             <Card news={news}/>
             <Loading />
         </div>

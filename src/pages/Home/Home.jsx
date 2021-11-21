@@ -24,7 +24,6 @@ export const Home = () => {
     return (
         <div className="container">
 
-            <h2>Noticias Recentes</h2>
             <Card news={news}/>
             <Loading />
         </div>
