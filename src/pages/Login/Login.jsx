@@ -1,22 +1,20 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
 import styles from './Login.module.css'
 
 export const Login = () => {
 
-    const signInWithGoogle = async () => {
+    const { signInWithGoogle } = useContext(AuthContext)
 
-        const auth = getAuth()
-        const provider = new GoogleAuthProvider();
-        const result = await signInWithPopup(auth, provider)
-
-        console.log(result.user)
+    const handleLogin = async () => {
+        await signInWithGoogle()
     }
 
 
     return (
-        <>
+        <div className={styles.loginContainer}>
             <h3>Faça login com sua conta do google</h3>
-            <button onClick={signInWithGoogle}>Clicando aqui</button>
-        </>
+            <button onClick={handleLogin}>Clicando aqui</button>
+        </div>
     );
 }
