@@ -8,8 +8,7 @@ export const Home = () => {
 
     const { news, getApiBySection } = useApi() 
     const { user, signInWithGoogle } = useAuth()
-    console.log(user)
-
+    
     useEffect(() => {
         
         (async () => {

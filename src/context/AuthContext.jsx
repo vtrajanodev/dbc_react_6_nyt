@@ -5,33 +5,32 @@ export const AuthContext = createContext()
 
 export const AuthContextProvider = ({ children }) => {
 
-    const [user, setUser] = useState()
-    const auth = getAuth()
+  const [user, setUser] = useState()
+  const auth = getAuth()
 
-    const signInWithGoogle = async () => {
+  const signInWithGoogle = async () => {
 
-        const provider = new GoogleAuthProvider()
-        const result = await signInWithPopup(auth, provider)
-    
-        if (result.user) {
-          const { displayName, photoURL, uid } = result.user
-    
-          if (!displayName || !photoURL) {
-            throw new Error('Missing information from Google Account.')
-          }
-    
-          setUser({
-            id: uid,
-            name: displayName,
-            avatar: photoURL
-          })
-        }
+    const provider = new GoogleAuthProvider()
+    const result = await signInWithPopup(auth, provider)
 
+    if (result.user) {
+      const { displayName, photoURL, uid } = result.user
+
+      if (!displayName || !photoURL) {
+        throw new Error('Missing information from Google Account.')
+      }
+
+      setUser({
+        id: uid,
+        name: displayName,
+        avatar: photoURL
+      })
     }
+  }
 
-    return (
-        <AuthContext.Provider value={{ user, signInWithGoogle }}>
-            {children}
-        </AuthContext.Provider>
-    );
+  return (
+    <AuthContext.Provider value={{ user, signInWithGoogle, auth }}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
