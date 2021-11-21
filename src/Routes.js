@@ -12,12 +12,12 @@ export const LinkRoutes = () => {
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route index path="/login" element={<Login />} />
-                <Route index path="/home" element={<Home />} />
-                <Route index path="/science" element={<Science />} />
-                <Route index path="/health" element={<Health />} />
-                <Route index path="/politics" element={<Politics />} />
-                <Route index path="/world" element={<World />} />
+                <Route index path="/" element={<Login />} />
+                <Route  path="/home" element={<Home />} />
+                <Route  path="/science" element={<Science />} />
+                <Route  path="/health" element={<Health />} />
+                <Route  path="/politics" element={<Politics />} />
+                <Route  path="/world" element={<World />} />
             </Routes>
         </BrowserRouter>
     );

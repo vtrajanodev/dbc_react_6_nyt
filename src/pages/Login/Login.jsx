@@ -1,13 +1,15 @@
-import { useContext } from 'react';
-import { AuthContext } from '../../context/AuthContext';
+import { useNavigate } from 'react-router';
+import { useAuth } from '../../hooks/useAuth';
 import styles from './Login.module.css'
 
 export const Login = () => {
 
-    const { signInWithGoogle } = useContext(AuthContext)
+    let navigate = useNavigate()
+    const { signInWithGoogle } = useAuth()
 
     const handleLogin = async () => {
         await signInWithGoogle()
+        navigate('/home')
     }
 
 
