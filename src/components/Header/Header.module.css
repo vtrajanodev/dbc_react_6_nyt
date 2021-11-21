@@ -1,0 +1,28 @@
+header {
+    height: 70px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .25rem;
+
+}
+
+header ul li {
+    display: inline;
+    margin-right: 2rem;
+}
+
+header ul li:last-child {
+    margin: 0;
+}
+
+header ul li:hover{
+    filter: brightness(0.8);
+}
+
+header ul li:active {
+    border-bottom: 1px solid yellow;
+}

@@ -1,0 +1,31 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.mainContainer:first-child {
+    margin-top: 1rem;
+}
+
+.mainContainer img {
+    border-radius: .25rem;
+    margin-right: 1rem;
+}
+
+.mainContainer p {
+    text-align: justify;
+}
+
+.noticeTitle {
+    margin-bottom: 2rem;
+}
+
+.noticeTitle span {
+    color: rgb(148, 148, 148);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1rem;
+}
