@@ -1,6 +1,5 @@
-import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from "@firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "@firebase/auth";
 import { createContext, useState } from "react";
-import { useEffect } from "react/cjs/react.development";
 
 export const AuthContext = createContext()
 

@@ -4,21 +4,21 @@ import { useAuth } from '../../hooks/useAuth';
 
 export const Header = () => {
 
-	const { user } = useAuth()
+  const { user } = useAuth()
 
-	return (
-		<>
-			{user && (
-				<div className="container">
-					<header>
-						<div>
-							Trending
-						</div>
-						
-						<Navigation />
-					</header>
-				</div>
-			)}
-		</>
-	);
+  return (
+    <>
+      {user && (
+        <div className="container">
+          <header>
+            <div>
+              Trending
+            </div>
+
+            <Navigation />
+          </header>
+        </div>
+      )}
+    </>
+  );
 }
