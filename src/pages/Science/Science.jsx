@@ -6,14 +6,13 @@ import api from '../../services/api';
 
 export const Science = () => {
 
-    const { news, setNews, apiKey, setLoading } = useApi()
+    const { news, setNews, apiKey } = useApi()
 
     useEffect(() => {
         (async () => {
             const { data } = await api.get(`/science.json?api-key=${apiKey}`)
             const filteredDataResults = data.results.filter(e => e.multimedia !== null)
             setNews(filteredDataResults)
-            setLoading(false)
         })()
     }, [])
 

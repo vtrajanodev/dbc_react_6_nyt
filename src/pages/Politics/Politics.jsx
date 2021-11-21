@@ -6,19 +6,15 @@ import api from "../../services/api";
 
 export const Politics = () => {
 
-    const { news, setNews, apiKey, setLoading, loading } = useApi()
+    const { news, setNews, apiKey } = useApi()
 
     useEffect(() => {
-
         (async () => {
             const { data } = await api.get(`/politics.json?api-key=${apiKey}`)
             const filteredDataResults = data.results.filter(e => e.multimedia !== null)
             setNews(filteredDataResults)
-            setLoading(false)
         })()
     }, [])
-
-    setLoading(true)
 
     return (
         <div className="container">

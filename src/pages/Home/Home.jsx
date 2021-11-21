@@ -6,7 +6,7 @@ import { useApi } from '../../hooks/useApi';
 
 export const Home = () => {
 
-    const { news, setNews, apiKey, setLoading } = useApi()
+    const { news, setNews, apiKey } = useApi()
     console.log(news)
 
     useEffect(() => {
@@ -14,7 +14,6 @@ export const Home = () => {
             const { data } = await api.get(`/home.json?api-key=${apiKey}`)
             const filteredDataResults = data.results.filter(e => e.multimedia !== null)
             setNews(filteredDataResults)
-            setLoading(false)
             
         })()
     }, [])

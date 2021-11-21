@@ -6,14 +6,13 @@ import api from "../../services/api";
 
 export const World = () => {
 
-    const { apiKey, setNews, news, setLoading } = useApi()
+    const { apiKey, setNews, news } = useApi()
 
     useEffect(() => {
         (async () => {
             const { data } = await api.get(`/world.json?api-key=${apiKey}`)
             const filteredDataResults = data.results.filter(e => e.multimedia !== null)
             setNews(filteredDataResults)
-            setLoading(false)
         })()
     }, [])
 
