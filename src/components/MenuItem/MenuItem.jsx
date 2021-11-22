@@ -1,9 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useResolvedPath, useMatch } from "react-router-dom";
 
 export const MenuItem = ({ itemName, url }) => {
+
+        let resolved = useResolvedPath(url)
+        let match = useMatch({ path: resolved.pathname, end: true })
+    
     return (
         <>
-            <li><Link to={url}>{itemName}</Link></li>
+            <li><Link style={{ textDecoration: match ? "underline" : "none" }} to={url}>{itemName}</Link></li>
         </>
     );
 }
