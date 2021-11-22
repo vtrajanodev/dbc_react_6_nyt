@@ -7,7 +7,9 @@ export const Header = () => {
 
   let resolved = useResolvedPath('/login')
   let match = useMatch({ path: resolved.pathname, end: true })
+
   let navigate = useNavigate()
+
   const { signOutFromSession } = useAuth()
 
   const logout = async () => {

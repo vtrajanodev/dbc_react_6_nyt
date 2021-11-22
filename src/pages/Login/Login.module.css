@@ -35,3 +35,15 @@ h3 {
 button:hover {
     color: #fff;
 }
+
+.buttonLogin {
+    height: 40px;
+    width: 300px;
+    border-radius: .25rem;
+    border: none;
+    background-color: rgb(121, 121, 121);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}

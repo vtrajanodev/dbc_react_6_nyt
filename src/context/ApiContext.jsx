@@ -6,8 +6,6 @@ export const ApiContext = createContext()
 
 export const ApiContextProvider = ({ children }) => {
 
-    const { user, signInWithGoogle } = useAuth()
-
     const apiKey = '4p8takOZOMFfwAA5GPObho7fJxmmtyto'
 
     const [news, setNews] = useState([])
