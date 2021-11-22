@@ -21,7 +21,7 @@ h3 {
     margin: 2rem 0 .5rem;
 }
 
-button {
+.loginButton {
     height: 40px;
     width: 300px;
     border-radius: .25rem;

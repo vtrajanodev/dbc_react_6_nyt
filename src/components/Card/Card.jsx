@@ -6,7 +6,7 @@ export const Card = ({ news }) => {
   const { user } = useAuth()
   return (
     <>
-      <div>
+      <>
         {user && (
           <div className={styles.userInfo}>
             <>
@@ -17,7 +17,7 @@ export const Card = ({ news }) => {
             </>
           </div>
         )}
-      </div>
+      </>
 
       <ul>
         {news.map((notice, index) => (

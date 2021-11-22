@@ -18,7 +18,7 @@ export const Login = () => {
             <div className={styles.loginField}>
                 <h1>Olá :)</h1>
                 <h3>Faça login com sua conta do google</h3>
-                <button onClick={handleLogin}>Clicando aqui</button>
+                <button className={styles.loginButton} onClick={handleLogin}>Clicando aqui</button>
             </div>
         </div>
     );
