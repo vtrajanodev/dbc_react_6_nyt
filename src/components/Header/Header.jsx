@@ -1,20 +1,20 @@
 import './Header.module.css'
 import { Navigation } from '../Navigation/Navigation';
-import { useAuth } from '../../hooks/useAuth';
+import { useResolvedPath, useMatch } from 'react-router';
 
 export const Header = () => {
 
-  const { user } = useAuth()
+  let resolved = useResolvedPath('/login')
+  let match = useMatch({ path: resolved.pathname, end: true })
 
   return (
     <>
-      {user && (
+      {!match && (
         <div className="container">
           <header>
             <div>
               Trending
             </div>
-
             <Navigation />
           </header>
         </div>

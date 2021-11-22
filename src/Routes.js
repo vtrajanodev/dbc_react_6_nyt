@@ -8,11 +8,13 @@ import { Science } from "./pages/Science/Science";
 import { World } from "./pages/World/World";
 
 export const LinkRoutes = () => {
+
+    
     return (
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route index path="/" element={<Login />} />
+                <Route index path="/login" element={<Login />} />
                 <Route  path="/home" element={<Home />} />
                 <Route  path="/science" element={<Science />} />
                 <Route  path="/health" element={<Health />} />

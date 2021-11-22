@@ -15,9 +15,7 @@ export const ApiContextProvider = ({ children }) => {
 
     const getApiBySection = async section => {
 
-        if (!user) {
-            await signInWithGoogle()
-        }
+       
 
         const { data } = await api.get(`/${section}.json?api-key=${apiKey}`)
         const filteredData = data.results.filter(e => e.multimedia !== null)
